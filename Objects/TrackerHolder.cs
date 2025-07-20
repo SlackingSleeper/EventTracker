@@ -370,7 +370,7 @@ namespace EventTracker.Objects
             if (!Settings.AdvancedMode.Value && !pb && pools != null && !early)
             {
                 // we might not have our actual PB but it might be better than what we have on record
-                if (!pools.ContainsKey("Goal") || time < pools["Goal"][0].Item2)
+                if (time < pools["Goal"][0].Item2)
                     pb = true;
             }
 
